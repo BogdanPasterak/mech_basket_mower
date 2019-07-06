@@ -32,4 +32,11 @@ class Pendulum extends Element{
     line( 0, -d / 8, 0, d / 8 );
     popMatrix();
   }
+
+  @Override
+  public String toString(){
+  
+    return "[ x = " + x + ", y = " + y + ", a = " + a + " ]";
+  }
+
 }

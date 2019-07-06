@@ -1,4 +1,6 @@
 ArrayList<Element> listE;
+Ppoint pp;
+Patyk p;
 
 void setup() {
   size(1200, 700);
@@ -21,15 +23,25 @@ void setup() {
   //listE.get(2).addSlave( listE.get(3) );
   //listE.get(4).addSlave( listE.get(5) );
   //listE.get(3).addSlave( listE.get(6) );
-  
+  pp = new Ppoint(400,20);
+  p = new Patyk();
 }
 
 void draw() {
-  background(0);
+  background(0); //<>//
+  
+  p.draw();
+  p.move();
+
+  //System.out.println(pp);
+  pp.draw();
+
   for ( Element e : listE )
     e.draw();
-  
-  
+    
+  //System.out.println(listE.get(0));
+
+  pp.move();
   listE.get(0).turn( );
   
 
