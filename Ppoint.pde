@@ -1,14 +1,14 @@
-class Ppoint{
+class Mpoint{
   float x, y, w;
   PVector v;
 
-  public Ppoint(int x, int y){
+  public Mpoint(int x, int y){
     // x, y of center
     this.x = x;
     this.y = y;
     // rotate
     w = 0;
-    v = new PVector(0.2, 0.05);
+    v = new PVector(1, 0.05);
   }
   
   public void move(){
@@ -21,16 +21,20 @@ class Ppoint{
   public void draw(){
 
     pushMatrix();
-    stroke(128);
-    strokeWeight(2);
-    fill(0);
+    // move to center and rotate
     translate(x, y);
     rotate(w);
-    translate(-x, -y);
-    ellipse(x+20, y+50, 20, 20 );
+    // draw
+    noFill();
+    stroke(128);
+    strokeWeight(2);
+    // Object
+    //line( 50, 0, 70, 0 );
+    // center
     strokeWeight(1);
-    line( x - 10, y, x + 10, y );
-    line( x, y + 10, x, y - 10 );
+    line( -10, 0, 10, 0 );
+    line( 0, 10, 0, -10 );
+    // back to orgin
     popMatrix();
   }
   
