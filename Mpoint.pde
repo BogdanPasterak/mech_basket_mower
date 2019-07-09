@@ -3,6 +3,8 @@ class Mpoint{
   float x, y;
   // rotation (rad)
   float w;
+  // Elements driven by this object.
+  ArrayList<Mpoint> subjects;
 
   public Mpoint(float _x, float _y){
     // x, y of center
@@ -10,6 +12,8 @@ class Mpoint{
     y = _y;
     // rotate
     w = 0;
+    // start with empty list
+    subjects = new ArrayList();
   }
   
   public void move(float _x, float _y){
