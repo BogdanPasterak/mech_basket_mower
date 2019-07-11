@@ -18,7 +18,7 @@ void draw() {
 
   listM.get(0).draw();
   listM.get(1).draw();
-  ((Mcircular)listM.get(0)).print();
+  //((Mcircular)listM.get(0)).print();
 
   
   listM.get(0).turn(-PI/128);
