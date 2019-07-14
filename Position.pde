@@ -1,15 +1,16 @@
-class Vector{
+class Position{
   private float x, y;
   // angel and distance
   private double a, d;
+  // rotation
   private float r;
   
-  public Vector(float x, float y, float r){
+  public Position(float x, float y, float r){
     setXY(x, y);
     this.r = r;
   }
    
-  public Vector(float x, float y){
+  public Position(float x, float y){
     setXY(x, y);
     this.r = 0;
   }

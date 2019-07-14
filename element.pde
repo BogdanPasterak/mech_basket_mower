@@ -1,4 +1,4 @@
-abstract class Element extends Vector{
+abstract class Element extends Position{
   // Position x,y and angle and distance
   // Vector to boss and last movment
   public float x, y, a, d, ba, bd, la, ld;
@@ -8,10 +8,8 @@ abstract class Element extends Vector{
   ArrayList<Element> e;
 
   
-  public Element(float x, float y, float a, float d){
-    super(x, y);
-    this.x = x;
-    this.y = y;
+  public Element(float x, float y){
+  super(x, y);
     this.a = a;
     this.d = d;
     e = new ArrayList<Element>();
